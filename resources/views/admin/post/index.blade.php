@@ -8,12 +8,11 @@
         </a>
 
         @foreach ($posts as $post)
-            <div class="rounded-pill card p-5 m-3" style="width: 28rem;">
+            <div class="rounded-pill card p-4 m-3" style="width: 40rem;">
 
                 <div class="card-body">
-                    <h2 class="card-title">{{ $post->title }}</h2>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <h2 class="card-title text-center">{{ $post->title }}</h2>
+                    <p class="card-text">{{ $post->body }}</p>
 
                     <div class="d-flex justify-content-between">
 
@@ -39,6 +38,10 @@
             </div>
         @endforeach
 
+
+    </div>
+    <div class="d-flex justify-content-center">
+        {{$posts ->links ()}}
 
     </div>
 @endsection
